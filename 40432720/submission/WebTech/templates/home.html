@@ -1,0 +1,60 @@
+{% extends 'maintemplate.html' %}
+
+{% block body %}
+<blockquote class="blockquote text-center">
+    Welcome to Edinburgh Napier University! As a new student it can be daunting not knowing where everything is.
+     So use this guide to help you get to know where some key places are and where to get help if you need it.</p>
+</blockquote>
+    <div class="row row-cols-1 row-cols-md-3">
+      <div class="col mb-4">
+        <div class="card h-100" style="width: 24rem;">
+          <div class="card-body">
+            <img src="static/images/where.png" class="card-img-fluid" alt="Responsive image" class="img-thumbnail">
+            <h5 class="card-title">Where is Everything?</h5>
+            <p class="card-text">Click on the button below to discover where the campuses, student accomodation, restaurants and shops are located.</p>
+            <button type="button" onclick="window.location.href='/where'"class="btn btn-danger">Click Here</button>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-4">
+        <div class="card h-100" style="width: 24rem;">
+          <div class="card-body">
+            <img src="static/images/support.png" class="card-img-fluid" alt="Responsive image" class="img-thumbnail">
+            <h5 class="card-title">Get Support</h5>
+            <p class="card-text">Click on the button below to find out where you can get support on financial, acomodation, learning or emotional matters.</p>
+            <button type="button" onclick="window.location.href='https://www.napier.ac.uk/study-with-us/student-life/student-support'; "class="btn btn-danger">Click Here</button>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-4">
+        <div class="card h-100" style="width: 24rem;">
+          <div class="card-body">
+            <img src="static/images/checklist.png" class="card-img-fluid" alt="Responsive image" class="img-thumbnail">
+            <h5 class="card-title">Checklist</h5>
+            <p class="card-text">Click on the button below to see a checklist of things you need to do and get before coming to university.</p>
+            <button type="button" onclick="window.location.href='/checklistalt'"class="btn btn-danger">Click Here</button>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-4">
+        <div class="card h-100" style="width: 24rem;">
+          <div class="card-body">
+            <img src="static/images/covid19brt.png" class="card-img-fluid" alt="Responsive image" class="img-thumbnail">
+            <h5 class="card-title">Covid 19</h5>
+            <p class="card-text">Click on the button below to see the latest information regarding Covid 19s impact on teaching, learning and living.</p>
+            <button type="button" onclick="window.location.href='https://www.napier.ac.uk/about-us/coronavirus'; "class="btn btn-danger">Click Here</button>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-4">
+        <div class="card h-100" style="width: 24rem;">
+          <div class="card-body">
+            <img src="static/images/edinburgh.png" class="card-img-fluid" alt="Responsive image" class="img-thumbnail">
+            <h5 class="card-title">Edinburgh!</h5>
+            <p class="card-text">Click on the button below to get some quick information about Edinburgh, it's events, history and it's people.</p>
+            <button type="button" onclick="window.location.href='https://www.napier.ac.uk/about-us/our-location/about-edinburgh';"class="btn btn-danger">Click Here</button>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

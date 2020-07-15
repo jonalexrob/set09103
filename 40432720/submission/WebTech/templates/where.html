@@ -1,0 +1,30 @@
+{% extends 'maintemplate.html' %}
+<head>
+    {{edimap.js}}
+</head>
+{% block body %}
+<body>
+    <h1>The local Edinburgh area</h1>
+    <div>Below is a map of some of the key places you will need to know as a student in Edinburgh.</div>
+    {% with map=googlemap_obj
+        ("edimap", 55.942627, -3.280661,
+     markers=[
+     (55.947871,-3.363518),
+     (55.941201,-3.216940),
+     (55.951937,-3.191791),
+     (55.935981, -3.228747),
+     (55.940198, -3.216225),
+     (55.941928, -3.220841),
+     (55.932961, -3.213266),
+     (55.919503, -3.237919),
+     (55.924510, -3.288041),
+     (55.945856, -3.218195),
+     (55.926290, -3.243945),
+     ]) 
+     %}
+        {{map.html}}
+        {{map.js}}
+    {% endwith %}
+{{edimap.html}}
+</body>
+{% endblock %}
