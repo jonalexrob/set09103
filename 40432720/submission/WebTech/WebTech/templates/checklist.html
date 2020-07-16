@@ -1,0 +1,30 @@
+{% extends 'maintemplate.html' %}
+
+{% block body %}
+<head>
+    <title>Checklist</title>
+</head>
+<body>
+    <h1>Use this page to check to see if you have all the items you will need on the first </h1>
+    <div>Add an item to the checklist: 
+        <form action="{{ url_for('add') }}" method="POST">
+            <input type="text" name="checklistitem">
+            <input type="submit" value="Add Item">
+        </form>
+    </div>
+    <div>
+        <h2>Items you need to get</h2>
+        <ul>
+            {% for missing items in checklist%}
+            <li style="font-size: 30pt">{{ todo.text }} <a href="{{ url_for('have', id=checklist.id) }}">Mark As Complete</a></li>
+            {% endfor %}    
+        </ul>
+        <h2>Items you have</h2>
+        <ul>
+            {% for items you have in checklist%}
+            <li style="font-size: 30pt">{{ checklist.text }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+{% endblock %}
